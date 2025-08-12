@@ -1,14 +1,14 @@
-import { useState, type FC } from "react";
-import PageContainer from "../../components/containers/PageContainer";
-import SectionContainer from "../../components/containers/SectionContainer";
-import { z } from "zod";
-import { useAuthStore } from "../../stores/useAuthStore";
-import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import bannerImage from "../../assets/images/3896377.jpg";
 import { Eye, EyeOff, Mail } from "lucide-react";
+import { useState, type FC } from "react";
+import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { z } from "zod";
+import bannerImage from "../../assets/images/3896377.jpg";
+import PageContainer from "../../components/containers/PageContainer";
+import SectionContainer from "../../components/containers/SectionContainer";
+import { useAuthStore } from "../../stores/useAuthStore";
 
 const passwordRegex =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!%*?#&]{8,}$/;
@@ -163,3 +163,5 @@ const Login: FC = () => {
 };
 
 export default Login;
+
+//
